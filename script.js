@@ -37,9 +37,32 @@ function findproductById(id) {
 }
 
 function getTotalCatalogValue() {
-  return products.reduce((sum, product) => sum + product.price,0);
+  return products.reduce((sum, product) => sum + product.price, 0);
 }
 // console.log(getInStockProducts());
 // console.log(getProductNames());
 // console.log(findproductById(2));
-console.log(getTotalCatalogValue());
+// console.log(getTotalCatalogValue());
+
+// TASK FOUR STUDENTS RECORD
+const students = [
+  { id: 1, name: "israel", score: 98, subject: "Computer programming" },
+  { id: 2, name: "mubarak", score: 80, subject: "physics" },
+  { id: 3, name: "fatie", score: 84, subject: "Biology" },
+  { id: 4, name: "temi", score: 83, subject: "English" },
+  { id: 5, name: "bimpe", score: 85, subject: "Thermodynamics" },
+  { id: 6, name: "shindara", score: 70, subject: "Chemistry" },
+];
+
+function getPassingStudents() {
+  const passMark = 50;
+  return students.filter((student) => student.score >= passMark);
+}
+
+function getAverageScore() {
+  const totalScore = students.reduce((sum, student) => sum + student.score, 0);
+  const averageScore = totalScore / students.length;
+  return averageScore;
+}
+// console.log(getPassingStudents());
+// console.log(getAverageScore());
